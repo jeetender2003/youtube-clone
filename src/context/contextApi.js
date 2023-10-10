@@ -26,14 +26,16 @@ export const AppContext = (props) => {
   return (
     <Context.Provider
       value={
-        (loading,
+        {
+          loading,
         setLoading,
         searchResults,
         setSearchResults,
         selectCategories,
         setSelectCategories,
         mobileMenu,
-        setMobileMenu)
+        setMobileMenu
+        }
       }
     >
       {props.children}
