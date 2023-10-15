@@ -5794,9 +5794,9 @@ const options = {
 };
 
 export const fetchDataFromAPI = async (url) => {
-//   const {data} = await axios.get(`${BASE_URL}/${url}`, options);s
+  const {data} = await axios.get(`${BASE_URL}/${url}`, options);
 
-//   return data;
+  return data;
 };
 
 

@@ -11,7 +11,7 @@ import SuggestedVideoCard from "./SuggestedVideoCard";
 const VideoDetail = () => {
   const [video, setVideo] = useState();
 
-  const [relatedVideos, setRelatedVideos] = useState(relatedVideoApi);
+  const [relatedVideos, setRelatedVideos] = useState();
   const { id } = useParams();
 
   const { setLoading } = useContext(Context);
@@ -19,7 +19,7 @@ const VideoDetail = () => {
   useEffect(() => {
     document.getElementById("root").classList.add("custom-h");
     fetchVideoDetails();
-    // fetchRelatedVideos();  Hardcore data added for temp
+    fetchRelatedVideos();  
   }, [id]);
 
   const fetchVideoDetails = () => {
